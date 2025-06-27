@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PyleaMUN School Delegation Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #E8EAE6; /* Light sage green */
+      color: #333;
+    }
+
+    /* Letterhead Styles */
+    .letterhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #D6DBD2; /* Deeper sage green */
+      border-bottom: 2px solid #444;
+      padding: 10px 20px;
+      height: 100px;
+    }
+
+    .address, .contact {
+      width: 25%;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .contact div {
+      margin: 2px 0;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    .letterhead a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .letterhead a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #005b63;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 2em;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      background-color: #e0f7fa;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 0.3em;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-bottom: 1.2em;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+
+    th, td {
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #b2dfdb;
+      color: #004d40;
+    }
+
+    .submit-btn {
+      background-color: #00b4a0;
+      color: white;
+      font-size: 1.1em;
+      padding: 1em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 2em;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #00897b;
+      transform: scale(1.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.5em;
+    }
+
+    @media (max-width: 768px) {
+      .letterhead {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+      }
+      .address, .contact {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .logo {
+        margin: 15px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LETTERHEAD -->
+  <div class="letterhead">
+    <div class="address">
+      <strong>4 Isminis Str.</strong><br>
+      Pylaia, Thessaloniki - 55535
+    </div>
+    <div>
+      <img src="https://pyleamun.github.io/interview-guide/pyleaMUNfinallogo_transparent.png" alt="PyleaMUN Logo" class="logo">
+    </div>
+    <div class="contact">
+      <div>📞 +30 2310329199</div>
+      <div>📧 <a href="mailto:pyleamun@gmail.com">pyleamun@gmail.com</a></div>
+      <div>🌐 <a href="https://pyleamun.github.io/pyleamun2026/" target="_blank">pyleamun.github.io/pyleamun2026</a></div>
+    </div>
+  </div>
+
+  <main>
+    <form action="https://formsubmit.co/pyleamun@gmail.com" method="POST">
+      <!-- FormSubmit hidden inputs -->
+      <input type="hidden" name="_subject" value="New MUN Registration 💌">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://pyleamun.github.io/thank-you.html">
+
+      <h1>📝 School Delegation Registration Form</h1>
+
+      <div class="form-group">
+        <label for="school">🏫 School:</label>
+        <input type="text" id="school" name="School" required>
+      </div>
+
+      <div class="form-group">
+        <label for="firstAdvisorEmail">📧 First Advisor’s personal e-mail:</label>
+        <input type="email" id="firstAdvisorEmail" name="First Advisor’s personal e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="firstAdvisorMobile">📱 First Advisor’s mobile number:</label>
+        <input type="tel" id="firstAdvisorMobile" name="First Advisor’s mobile number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="secondAdvisorEmail">📧 Second Advisor’s personal e-mail:</label>
+        <input type="email" id="secondAdvisorEmail" name="Second Advisor’s personal e-mail">
+      </div>
+
+      <div class="form-group">
+        <label for="secondAdvisorMobile">📱 Second Advisor’s mobile number:</label>
+        <input type="tel" id="secondAdvisorMobile" name="Second Advisor’s mobile number">
+      </div>
+
+      <div class="form-group">
+        <label for="numberOfDelegates">🧑‍🎓 Number of Delegates:</label>
+        <input type="number" id="numberOfDelegates" name="Number of Delegates" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label>🌍 Countries Represented:</label>
+        <label for="country1">🇺🇳 Country 1:</label>
+        <input type="text" id="country1" name="Country 1" required>
+        <label for="country2">🏳️ Country 2:</label>
+        <input type="text" id="country2" name="Country 2">
+      </div>
+
+      <h2>📋 Delegate Allocation to Committees</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Committee</th>
+            <th>Country 1</th>
+            <th>Country 2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>UN Environment Programme 🌱</td><td><input type="text" name="UNEP Country 1"></td><td><input type="text" name="UNEP Country 2"></td></tr>
+          <tr><td>Security Council 🔐</td><td><input type="text" name="SC Country 1"></td><td><input type="text" name="SC Country 2"></td></tr>
+          <tr><td>Economic & Social Council 💰</td><td><input type="text" name="ECOSOC Country 1"></td><td><input type="text" name="ECOSOC Country 2"></td></tr>
+          <tr><td>NATO 🛡️</td><td><input type="text" name="NATO Country 1"></td><td><input type="text" name="NATO Country 2"></td></tr>
+          <tr><td>World Health Organisation 🏥</td><td><input type="text" name="WHO Country 1"></td><td><input type="text" name="WHO Country 2"></td></tr>
+          <tr><td>Human Rights Council 🤝</td><td><input type="text" name="HRC Country 1"></td><td><input type="text" name="HRC Country 2"></td></tr>
+          <tr><td>UNESCO 📚</td><td><input type="text" name="UNESCO Country 1"></td><td><input type="text" name="UNESCO Country 2"></td></tr>
+          <tr><td>UN Women 👩‍⚖️</td><td><input type="text" name="UN Women Country 1"></td><td><input type="text" name="UN Women Country 2"></td></tr>
+          <tr><td>Historical Crisis Committee ⏳</td><td><input type="text" name="HCC Country 1"></td><td><input type="text" name="HCC Country 2"></td></tr>
+        </tbody>
+      </table>
+
+      <div class="form-group">
+        <label for="comments">💬 Special Comments:</label>
+        <textarea id="comments" name="Special Comments" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">📨 Submit Registration</button>
+    </form>
+  </main>
+
+</body>
+</html>
